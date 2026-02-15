@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #fffde7, #fff176);
+    margin: 0;
+    padding: 40px;
+}
+
+
+/* Main container */
+.main-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;   /* 👈 THIS CREATES SPACE BETWEEN SECTIONS */
+}
+
+/* Card style */
+.card {
+    background: white;
+    padding: 25px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #4e73df;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2e59d9;
+}
+
+#result {
+    margin-top: 15px;
+    background: #f8f9fc;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.hii-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fbc02d;  /* Dark Yellow */
+    color: #222;
+    padding: 12px 25px;
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 10000;
+}
+
+/* Optional smooth hover effect */
+.hii-header:hover {
+    background-color: #f9a825;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.wave {
+    display: inline-block;
+    animation: wave-animation 1.5s infinite;
+    transform-origin: 70% 70%;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(0deg); }
+    15% { transform: rotate(14deg); }
+    30% { transform: rotate(-8deg); }
+    40% { transform: rotate(14deg); }
+    50% { transform: rotate(-4deg); }
+    60% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.snake {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(90deg, green, darkgreen);
+    border-radius: 50%;
+    z-index: 9999;
+    animation: moveSnake 12s linear infinite;
+}
+
+
+/* Snake Movement Around Border */
+@keyframes moveSnake {
+
+    0% {
+        top: 0;
+        left: 0;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        top: 0;
+        left: calc(100% - 40px);
+        transform: rotate(90deg);
+    }
+
+    50% {
+        top: calc(100% - 40px);
+        left: calc(100% - 40px);
+        transform: rotate(180deg);
+    }
+
+    75% {
+        top: calc(100% - 40px);
+        left: 0;
+        transform: rotate(270deg);
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+        transform: rotate(360deg);
+    }
+}
