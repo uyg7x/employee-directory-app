@@ -64,6 +64,29 @@ POST /add-employee
 
 ---
 
+📊 Python Data Extraction & Tabular Conversion
+
+This project also includes Python integration to read data from MongoDB and convert it into structured tabular format using Pandas.
+
+🚀 Features
+Connects to MongoDB database
+Fetches collection data
+Converts data into DataFrame (table format)
+Displays structured output
+Can export data to Excel / CSV
+
+🛠 Installation
+Make sure Python is installed.
+Install required libraries:
+pip install pymongo pandas
+
+Python Script (read_db.py)
+
+
+python read_db.py
+
+
+
 ## 📄 License
 
 This project is licensed under the MIT License.
